@@ -1,3 +1,4 @@
+### Output
 ```
 Vertex 0 has color white
 Vertex 1 has color black
