@@ -4,7 +4,7 @@
 
 using namespace boost;
 
-/// Example to test for bipartiteness and print the certificates.
+/// Example to test for bipartiteness and print 
 
 template <typename Graph>
 void print_bipartite (const Graph& g)
@@ -12,7 +12,7 @@ void print_bipartite (const Graph& g)
   typedef graph_traits <Graph> traits;
   typename traits::vertex_iterator vertex_iter, vertex_end;
 
-  /// Most simple interface just tests for bipartiteness. 
+ 
 
   bool bipartite = is_bipartite (g);
 
@@ -58,46 +58,19 @@ int main (int argc, char **argv)
   typedef adjacency_list <vecS, vecS, undirectedS> vector_graph_t;
   typedef std::pair <int, int> E;
 
-  /**
-   * Create the graph drawn below.
-   *
-   *       0 - 1 - 2
-   *       |       |
-   *   3 - 4 - 5 - 6
-   *  /      \   /
-   *  |        7
-   *  |        |
-   *  8 - 9 - 10
-   **/
+  
 
   E bipartite_edges[] = { E (0, 1), E (0, 4), E (1, 2), E (2, 6), E (3, 4), E (3, 8), E (4, 5), E (4, 7), E (5, 6), E (
       6, 7), E (7, 10), E (8, 9), E (9, 10) };
   vector_graph_t bipartite_vector_graph (&bipartite_edges[0],
       &bipartite_edges[0] + sizeof(bipartite_edges) / sizeof(E), 11);
 
-  /**
-   * Create the graph drawn below.
-   * 
-   *       2 - 1 - 0
-   *       |       |
-   *   3 - 6 - 5 - 4
-   *  /      \   /
-   *  |        7
-   *  |       /
-   *  8 ---- 9
-   *  
-   **/
 
-  E non_bipartite_edges[] = { E (0, 1), E (0, 4), E (1, 2), E (2, 6), E (3, 6), E (3, 8), E (4, 5), E (4, 7), E (5, 6),
-      E (6, 7), E (7, 9), E (8, 9) };
-  vector_graph_t non_bipartite_vector_graph (&non_bipartite_edges[0], &non_bipartite_edges[0]
-      + sizeof(non_bipartite_edges) / sizeof(E), 10);
 
-  /// Call test routine for a bipartite and a non-bipartite graph.
 
   print_bipartite (bipartite_vector_graph);
 
-  print_bipartite (non_bipartite_vector_graph);
+ 
 
   return 0;
 }
