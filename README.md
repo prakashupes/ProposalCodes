@@ -1,5 +1,5 @@
 # ProposalCodes
-This repository contains Example codes of proposal
+This repository contains Example codes of GSoc proposal
 
 ### Dependencies 
 >1.Installed Boost Libraries <br>
