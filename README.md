@@ -1,5 +1,13 @@
 # ProposalCodes
-This repository contains Example codes of GSoc proposal
+This repository contains Example codes of GSoc proposal.
+The project consists of the implementation of two algorithms:<br>
+><b>1.Lengauer Tarjan Dominator Tree <br>
+>2.Two Graphs Common Spanning Trees</b>
+
+The algorithms are going to be taken from Boost Graph Library (BGL). The first part of this project is to provide support for Lengauer Tarjan Dominator Tree in pgRouting. Lengauer Tarjan Dominator Tree is applied in many routing applications, such as if the user wants to go from city A to city B and there are multiple routes but all the routes are diverting from city X then the user can find out city X by using this algorithm.
+And the second part of this project is to provide support for Two Graphs Common Spanning Trees in pgRouting.  Mint, Read and Tarjan (MRT) algorithm is used to calculate Two Graphs Common Spanning Trees.
+
+
 
 ### Dependencies 
 >1.Installed Boost Libraries <br>
@@ -12,3 +20,5 @@ This repository contains Example codes of GSoc proposal
 ```
  ./file_name
 ```
+### Visualization:
+#### 1. Lengauer Tarjan Dominator Tree
