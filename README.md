@@ -22,5 +22,10 @@ And the second part of this project is to provide support for Two Graphs Common 
 ```
 ### Visualization:
 #### 1. Lengauer Tarjan Dominator Tree:
-Visualizaion:
+
 ![download (3)](https://user-images.githubusercontent.com/44925217/77232179-77271200-6bc5-11ea-97f5-f372df77786f.gif)
+
+
+#### 1. Two Graphs Common Spanning Trees:
+![download (2)](https://user-images.githubusercontent.com/44925217/77232235-cec57d80-6bc5-11ea-809e-2b7ead970edf.gif)
+
