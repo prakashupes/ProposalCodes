@@ -1,4 +1,4 @@
-#include <boost/test/included/unit_test.hpp>
+//#include <boost/test/included/unit_test.hpp>
 #include <iostream>
 #include <algorithm>
 #include <boost/graph/adjacency_list.hpp>
@@ -23,7 +23,7 @@ typedef adjacency_list<
     bidirectionalS,
     property<vertex_index_t, std::size_t>, no_property> G;
 
-int test_main(int, char*[])
+int main(int, char*[])
 {
   typedef DominatorCorrectnessTestSet::edge edge;
 
@@ -122,9 +122,7 @@ int test_main(int, char*[])
     cout << endl;
 
     // dominator tree correctness test
-    cout<<"Checking from previus assumptions: "<<endl;
-    BOOST_CHECK(std::equal(idom.begin(), idom.end(), testSet[i].correctIdoms.begin()));
-
+   
 
   }
 
