@@ -76,9 +76,9 @@ vG_o.push_back(boost::add_edge(0, 1, vG).first);
 
   cout<<"\nReading trees"<<endl;
   for(auto i: coll){
-  	for(auto j: i)
-  	{
-  		cout<<j<<" ";
+     for(auto j: i)
+       {
+  	 cout<<j<<" ";
   	}
   	cout<<endl;
   
