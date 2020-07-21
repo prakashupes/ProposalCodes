@@ -46,24 +46,21 @@ int main(int argc, char **argv)
   vector< edge_descriptor > iG_o;
   vector< edge_descriptor > vG_o;
 
-iG_o.push_back(boost::add_edge(0, 1, iG).first);
+  iG_o.push_back(boost::add_edge(0, 1, iG).first);
 
-vG_o.push_back(boost::add_edge(0, 0, vG).first);
-vG_o.push_back(boost::add_edge(0, 1, vG).first);
+  vG_o.push_back(boost::add_edge(0, 0, vG).first);
+  vG_o.push_back(boost::add_edge(0, 1, vG).first);
   cout<<"Iterate over iG_o"<<endl;
   
-  for(edge_descriptor i: iG_o)
-  {
+  for(edge_descriptor i: iG_o){
   	cout<<i<<" ";
   }
   cout<<endl;
   cout<<"Iterate over vG_o"<<endl;
-  for(auto i: vG_o)
-  {
+  for(auto i: vG_o){
   	cout<<i<<" ";
   }
   vector<bool> inL(iG_o.size(), false);
-
   std::vector< std::vector<bool> > coll;
   boost::tree_collector<
       std::vector< std::vector<bool> >,
@@ -76,14 +73,11 @@ vG_o.push_back(boost::add_edge(0, 1, vG).first);
 
   cout<<"\nReading trees"<<endl;
   for(auto i: coll){
-     for(auto j: i)
-       {
+    for(auto j: i)
+      {
   	 cout<<j<<" ";
   	}
   	cout<<endl;
-  
   }
-
-
   return 0;
 }
