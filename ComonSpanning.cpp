@@ -71,7 +71,7 @@ vG_o.push_back(boost::add_edge(0, 1, vG).first);
   	cout<<i<<" ";
   }
   cout<<endl;
-  cout<<"Iterate over iG_o"<<endl;
+  cout<<"Iterate over vG_o"<<endl;
   for(auto i: vG_o)
   {
   	cout<<i<<" ";
