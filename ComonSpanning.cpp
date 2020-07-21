@@ -45,21 +45,7 @@ int main(int argc, char **argv)
   Graph iG, vG;
   vector< edge_descriptor > iG_o;
   vector< edge_descriptor > vG_o;
-/*
-  iG_o.push_back(boost::add_edge(0, 3, iG).first);
-  iG_o.push_back(boost::add_edge(0, 1, iG).first);
-  iG_o.push_back(boost::add_edge(1, 2, iG).first);
-  iG_o.push_back(boost::add_edge(2, 3, iG).first);
-  iG_o.push_back(boost::add_edge(3, 4, iG).first);
 
-   
-  vG_o.push_back(boost::add_edge(0, 3, vG).first);
-  vG_o.push_back(boost::add_edge(0, 1, vG).first);
-  vG_o.push_back(boost::add_edge(1, 2, vG).first);
-  vG_o.push_back(boost::add_edge(2, 3, vG).first);
-  vG_o.push_back(boost::add_edge(2, 4, vG).first);
-
-*/
 iG_o.push_back(boost::add_edge(0, 1, iG).first);
 
 vG_o.push_back(boost::add_edge(0, 0, vG).first);
@@ -92,30 +78,6 @@ vG_o.push_back(boost::add_edge(0, 1, vG).first);
       tree_collector,
       inL
     );
-/*
-//Try these one bye one
-boost::two_graphs_common_spanning_trees
-    (
-      vG,
-      
-      vG,
-     
-      tree_collector,
-      inL
-    );
-
-
-boost::two_graphs_common_spanning_trees
-    (
-      iG,
-      
-      iG,
-     
-      tree_collector,
-      inL
-    );
-
-*/
 
   cout<<"\nReading trees"<<endl;
   for(auto i: coll)
