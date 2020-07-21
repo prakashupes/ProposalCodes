@@ -71,17 +71,11 @@ vG_o.push_back(boost::add_edge(0, 1, vG).first);
     > tree_collector(coll);
   boost::two_graphs_common_spanning_trees
     (
-      iG,
-      
-      vG,
-     
-      tree_collector,
-      inL
+      iG,vG,tree_collector,inL
     );
 
   cout<<"\nReading trees"<<endl;
-  for(auto i: coll)
-  {
+  for(auto i: coll){
   	for(auto j: i)
   	{
   		cout<<j<<" ";
