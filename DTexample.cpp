@@ -64,28 +64,24 @@ int main(int, char*[])
     G g(edges.begin(),edges.end(),numOfVertices);
 
     typedef graph_traits<G>::vertex_descriptor Vertex;
-    typedef property_map<G, vertex_index_t>::type IndexMap;
-    typedef
-      iterator_property_map<vector<Vertex>::iterator, IndexMap>
-      PredMap;
-
+   
     vector<Vertex> domTreePredVector, domTreePredVector2;
-    IndexMap indexMap(get(vertex_index, g));
+    auto indexMap(get(vertex_index, g));
     graph_traits<G>::vertex_iterator uItr, uEnd;
     int j = 0;
     for (boost::tie(uItr, uEnd) = vertices(g); uItr != uEnd; ++uItr, ++j)
     {
-      put(indexMap, *uItr, j);
+      put(indexMap, *uItr, j); //instead of j try to put graph[*v].id
     }
 
     // Lengauer-Tarjan dominator tree algorithm
     
     domTreePredVector =
-      vector<Vertex>(num_vertices(g), graph_traits<G>::null_vertex());
-    PredMap domTreePredMap =
+      vector<Vertex>(num_vertices(g));
+    auto domTreePredMap =
       make_iterator_property_map(domTreePredVector.begin(), indexMap);
 
-    lengauer_tarjan_dominator_tree(g, vertex(35, g), domTreePredMap);
+    lengauer_tarjan_dominator_tree(g, vertex(1, g), domTreePredMap);
 
     vector<int> idom(num_vertices(g));
     for (boost::tie(uItr, uEnd) = vertices(g); uItr != uEnd; ++uItr)
